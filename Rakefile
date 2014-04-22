@@ -6,7 +6,7 @@ desc "Hook our dotfiles into system-standard positions."
 task :install => [:submodule_init, :submodules] do
   puts
   puts "======================================================"
-  puts "Welcome to YADR Installation."
+  puts "Welcome to Sandeep Dotfile Installation."
   puts "======================================================"
   puts
 
@@ -59,11 +59,11 @@ desc "Init and update submodules."
 task :submodules do
   unless ENV["SKIP_SUBMODULES"]
     puts "======================================================"
-    puts "Downloading YADR submodules...please wait"
+    puts "Downloading Sandeep Dotfiles submodules...please wait"
     puts "======================================================"
 
     run %{
-      cd $HOME/.yadr
+      cd ~/.dotfiles
       git submodule update --recursive
       git clean -df
     }
@@ -102,7 +102,7 @@ task :install_vundle do
   vundle_path = File.join('vim','bundle', 'vundle')
   unless File.exists?(vundle_path)
     run %{
-      cd $HOME/.yadr
+      cd ~/.dotfiles
       git clone https://github.com/gmarik/vundle.git #{vundle_path}
     }
   end
@@ -181,7 +181,7 @@ def install_fonts
   puts "======================================================"
   puts "Installing patched fonts for Powerline/Lightline."
   puts "======================================================"
-  run %{ cp -f $HOME/.yadr/fonts/* $HOME/Library/Fonts }
+  run %{ cp -f ~/.dotfiles/fonts/* $HOME/Library/Fonts }
   puts
 end
 
@@ -254,14 +254,14 @@ def install_prezto
   puts
   puts "Installing Prezto (ZSH Enhancements)..."
 
-  run %{ ln -nfs "$HOME/.yadr/zsh/prezto" "${ZDOTDIR:-$HOME}/.zprezto" }
+  run %{ ln -nfs "~/.dotfiles/zsh/prezto" "${ZDOTDIR:-$HOME}/.zprezto" }
 
   # The prezto runcoms are only going to be installed if zprezto has never been installed
   file_operation(Dir.glob('zsh/prezto/runcoms/z*'), :copy)
 
   puts
   puts "Overriding prezto ~/.zpreztorc with YADR's zpreztorc to enable additional modules..."
-  run %{ ln -nfs "$HOME/.yadr/zsh/prezto-override/zpreztorc" "${ZDOTDIR:-$HOME}/.zpreztorc" }
+  run %{ ln -nfs "~/.dotfiles/zsh/prezto-override/zpreztorc" "${ZDOTDIR:-$HOME}/.zpreztorc" }
 
   puts
   puts "Creating directories for your customizations"
@@ -320,7 +320,7 @@ def file_operation(files, method = :symlink)
     # Eventually yadr's zsh extensions should be ported to prezto modules.
     if file == 'zshrc'
       File.open(target, 'a') do |zshrc|
-        zshrc.puts('for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file')
+          zshrc.puts('for config_file (~/.dotfiles/zsh/*.zsh) source $config_file')
       end
     end
 
@@ -349,13 +349,5 @@ def apply_theme_to_iterm_profile_idx(index, color_scheme_path)
 end
 
 def success_msg(action)
-  puts ""
-  puts "   _     _           _         "
-  puts "  | |   | |         | |        "
-  puts "  | |___| |_____  __| | ____   "
-  puts "  |_____  (____ |/ _  |/ ___)  "
-  puts "   _____| / ___ ( (_| | |      "
-  puts "  (_______\_____|\____|_|      "
-  puts ""
-  puts "YADR has been #{action}. Please restart your terminal and vim."
+  puts "Sandeep DotFiles has been #{action}. Please restart your terminal and vim."
 end

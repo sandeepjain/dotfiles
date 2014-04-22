@@ -173,10 +173,12 @@ nnoremap <D-Left> <C-w><
 nnoremap <D-Right>  <C-w>>
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
-imap <silent> <C-K> <%=   %><Esc>3hi
+"imap <silent> <C-K> <%=   %><Esc>3hi
+imap <silent> <C-K> {{   }}<Esc>3hi
 
 " create <%= foo %> erb tags using Ctrl-j in edit mode
-imap <silent> <C-J> <%  %><Esc>2hi
+"imap <silent> <C-J> <%  %><Esc>2hi
+imap <silent> <C-J> {%  %}<Esc>2hi
 
 " ============================
 " Shortcuts for everyday tasks
@@ -228,3 +230,14 @@ map <D-%> :so %<CR>
 
 " ,hp = html preview
 map <silent> ,hp :!open -a Safari %<CR><CR>
+
+" map :W to :w
+command WQ wq
+command Wq wq
+command W w
+command Q q
+
+" navigate tabs with cmd + opt + left/right
+map <D-M-Right> gt
+map <D-M-Left> gT
+
