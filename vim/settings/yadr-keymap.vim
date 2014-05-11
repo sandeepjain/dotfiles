@@ -123,9 +123,11 @@ autocmd FileType javascript map <buffer> <D-j> {
 
 
 " Command-/ to toggle comments
-map <D-/> :TComment<CR>
-imap <D-/> <Esc>:TComment<CR>i
+" map <D-/> :TComment<CR>
+" imap <D-/> <Esc>:TComment<CR>i
 
+map <silent> <leader>c<space> :TComment<CR>
+" imap <leader>c <Esc>:TComment<CR>i
 
 "Move back and forth through previous and next buffers
 "with ,z and ,x
@@ -241,3 +243,5 @@ command Q q
 map <D-M-Right> gt
 map <D-M-Left> gT
 
+vnoremap < <gv
+vnoremap > >gv

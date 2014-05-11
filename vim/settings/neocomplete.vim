@@ -6,14 +6,14 @@ let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 
 " Default # of completions is 100, that's crazy.
-let g:neocomplete#max_list = 5
+let g:neocomplete#max_list = 10
 
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " Map standard Ctrl-N completion to Cmd-Space
-inoremap <D-Space> <C-n>
+" inoremap <D-Space> <C-n>
 
 " This makes sure we use neocomplete completefunc instead of
 " the one in rails.vim, otherwise this plugin will crap out.
@@ -31,6 +31,32 @@ if !exists('g:neocomplete#keyword_patterns')
     let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
+
+" Courtesy of Matteo Cavalleri
+function! CleverTab()
+    if pumvisible()
+        return "\<C-n>"
+    endif 
+    let substr = strpart(getline('.'), 0, col('.') - 1)
+    let substr = matchstr(substr, '[^ \t]*$')
+    if strlen(substr) == 0
+        " nothing to match on empty string
+        return "\<Tab>"
+    else
+        " existing text matching
+        " if neosnippet#expandable_or_jumpable()
+            " return "\<Plug>(neosnippet_expand_or_jump)"
+        " else
+            return "\<C-n>"
+            " return neocomplete#start_manual_complete()
+        " endif
+    endif
+endfunction
+
+imap <expr> <Tab> CleverTab()
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
