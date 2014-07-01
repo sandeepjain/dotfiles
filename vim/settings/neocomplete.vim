@@ -48,7 +48,7 @@ function! CleverTab()
     else
         " existing text matching
         " if neosnippet#expandable_or_jumpable()
-            " return "\<Plug>(neosnippet_expand_or_jump)"
+            " return "\<Plug>snipMateTrigge"
         " else
             return "\<C-n>"
             " return neocomplete#start_manual_complete()
