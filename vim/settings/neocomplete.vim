@@ -35,7 +35,7 @@ let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
 
-" Courtesy of Matteo Cavalleri
+Courtesy of Matteo Cavalleri
 function! CleverTab()
     if pumvisible()
         return "\<C-n>"
