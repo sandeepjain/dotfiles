@@ -39,7 +39,7 @@ let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<TAB>"
 
-" Courtesy of Matteo Cavalleri
+Courtesy of Matteo Cavalleri
 function! CleverTab()
     if pumvisible()
         return "\<C-n>"
@@ -52,7 +52,7 @@ function! CleverTab()
     else
         " existing text matching
         " if neosnippet#expandable_or_jumpable()
-            " return "\<Plug>(neosnippet_expand_or_jump)"
+            " return "\<Plug>snipMateTrigge"
         " else
             return "\<C-n>"
             " return neocomplete#start_manual_complete()
