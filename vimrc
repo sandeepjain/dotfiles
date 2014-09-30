@@ -95,6 +95,8 @@ set wildignore+=*.gem
 set wildignore+=log/**
 set wildignore+=tmp/**
 set wildignore+=*.png,*.jpg,*.gif
+" Disable scratch preview window displayed by omnicomplete
+set completeopt-=preview
 
 "
 

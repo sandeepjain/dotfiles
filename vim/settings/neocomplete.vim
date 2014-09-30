@@ -51,16 +51,16 @@ function! CleverTab()
         return "\<Tab>"
     else
         " existing text matching
-        " if neosnippet#expandable_or_jumpable()
-            " return "\<Plug>snipMateTrigge"
-        " else
-            return "\<C-n>"
-            " return neocomplete#start_manual_complete()
-        " endif
+        if neosnippet#expandable_or_jumpable()
+            return  "\<Plug>(neosnippet_expand_or_jump)"
+        else
+            " return "\<C-n>"
+            return neocomplete#start_manual_complete()
+        endif
     endif
 endfunction
 
-imap <expr> <Tab> CleverTab()
+" imap <expr> <Tab> CleverTab()
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
