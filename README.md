@@ -59,14 +59,14 @@ sh -c "`curl -fsSL https://raw.github.com/skwp/dotfiles/master/install.sh`" -s a
 Upgrading is easy.
 
 ```bash
-cd ~/.yadr
+cd ~/.dotfiles
 git pull --rebase
 rake update
 ```
 
 ## What's included, and how to customize?
 
-Read on to learn what YADR provides!
+Read on to learn what this dotfiles repo provides!
 
 ### [Homebrew](http://mxcl.github.com/homebrew/)
 
@@ -85,7 +85,7 @@ We've also provided lots of enhancements:
 * `Ctrl-x,Ctrl-l` to insert output of last command
 * Fuzzy matching - if you mistype a directory name, tab completion will fix it
 * [fasd](https://github.com/clvv/fasd) integration - hit `z` and partial match for recently used directory. Tab completion enabled.
-* [Prezto - the power behind YADR's zsh](http://github.com/sorin-ionescu/prezto)
+* [Prezto - the power behind zsh](http://github.com/sorin-ionescu/prezto)
 * [How to add your own ZSH theme](doc/zsh/themes.md)
 
 ### Aliases
@@ -187,7 +187,7 @@ of plugins above to learn more.
 
 #### Better keystrokes for common editing commands
 
- * Cmd-Space to autocomplete. Tab for snipmate snippets.
+ * `Tab` to autocomplete, provided by Supertab. `Ctrk-k` for neosnippet snippets.
  * `,#` `,"` `,'` `,]` `,)` `,}` to surround a word in these common wrappers. the # does #{ruby interpolation}. works in visual mode (thanks @cj). Normally these are done with something like `ysw#`
  * `Cmd-'`, `Cmd-"`, `Cmd-]`, `Cmd-)`, etc to change content inside those surrounding marks. You don't have to be inside them.
  * `,.` to go to last edit location (same as `'.`) because the apostrophe is hard on the pinky
