@@ -14,3 +14,4 @@ Bundle "skwp/vim-html-escape"
 Bundle "tpope/vim-haml"
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
+Bundle "mattn/emmet-vim"
