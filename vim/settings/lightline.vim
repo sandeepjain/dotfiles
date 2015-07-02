@@ -35,12 +35,8 @@ endfunction
 
 function! MyFilename()
   let fname = expand('%:t')
-  return fname == 'ControlP' ? g:lightline.ctrlp_item :
-        \ fname == '__Tagbar__' ? g:lightline.fname :
+  return fname == '__Tagbar__' ? g:lightline.fname :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
-        \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \ &ft == 'unite' ? unite#get_status_string() :
-        \ &ft == 'vimshell' ? vimshell#get_status_string() :
         \ ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
         \ ('' != fname ? fname : '[No Name]') .
         \ ('' != MyModified() ? ' ' . MyModified() : '')
@@ -73,20 +69,16 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ],
+      \             [ 'fugitive', 'filename'] ],
       \   'right': [ ['lineinfo'],
       \              ['fileformat', 'fileencoding', 'filetype'] ],
       \ },
       \ 'inactive': {
-      \   'left': [ [ 'filename', 'modified' ] ],
+      \   'left': [ [ 'filename'] ],
       \   'right': [ ['lineinfo'] ],
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
-      \   'readonly': 'MyReadonly',
-      \   'modified': 'MyModified',
-      \   'fileformat': 'MyFileformat',
-      \   'filetype': 'MyFiletype',
       \   'fileencoding': 'MyFileencoding',
       \   'mode': 'MyMode',
       \   'filename': 'MyFilename'
