@@ -128,3 +128,5 @@
 [user]
 	name = Sandeep Jain
 	email = saneep@example.com
+[credential]
+	helper = osxkeychain

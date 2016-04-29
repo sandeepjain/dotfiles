@@ -2,7 +2,16 @@
 
 " http://ethanschoonover.com/solarized/vim-colors-solarized
 colorscheme solarized
+" let g:onedark_termcolors=256
+" let g:onedark_terminal_italics=1
 set background=dark
+" let g:airline_theme='onedark'
+
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
 
 if has("gui_running")
   "tell the term has 256 colors

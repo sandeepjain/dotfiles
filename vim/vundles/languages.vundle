@@ -12,10 +12,13 @@ Bundle "scrooloose/syntastic.git"
 Bundle "nelstrom/vim-markdown-preview"
 Bundle "skwp/vim-html-escape"
 Bundle "tpope/vim-haml"
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
+"Bundle 'Shougo/neosnippet'
+"Bundle 'Shougo/neosnippet-snippets'
 "Bundle "Shougo/neocomplete.git"
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Bundle "Valloric/YouCompleteMe"
 "Bundle "vim-scripts/AutoComplPop"
 Bundle "mattn/emmet-vim"
 Bundle "evidens/vim-twig"
+Bundle 'mxw/vim-jsx'

@@ -1,9 +1,6 @@
 "Abbreviations, trigger by typing the abbreviation and hitting space
 
-abbr rlb Rails.logger.banner
-abbr rld Rails.logger.debug
-abbr pry! require 'pry'; binding.pry
-abbr cl! console.log( )<left><left>
+abbr cl console.log();<left><left>
+abbr rt return;<left>
+abbr rtf return false;
 
-" Rspec Before
-abbr rbf before { }<left><left>

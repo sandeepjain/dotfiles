@@ -35,7 +35,7 @@ endfunction
 
 function! MyFilename()
   let fname = expand('%:t')
-  return fname == '__Tagbar__' ? g:lightline.fname :
+  return fname == '__Tagbar__' ? 'Tagbar' :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
         \ ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
         \ ('' != fname ? fname : '[No Name]') .
@@ -58,6 +58,7 @@ endfunction
 function! MyMode()
   let fname = expand('%:t')
   return fname == '__Tagbar__' ? 'Tagbar' :
+        \ fname == 'ControlP' ? 'CtrlP' :
         \ fname == '__Gundo__' ? 'Gundo' :
         \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
         \ fname =~ 'NERD_tree' ? 'NERDTree' :
