@@ -1,5 +1,5 @@
-Bundle "jistr/vim-nerdtree-tabs.git"
-Bundle "scrooloose/nerdtree.git"
-Bundle "kien/ctrlp.vim"
-Bundle "xolox/vim-misc"
-Bundle "xolox/vim-session"
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdtree'
+Plug 'kien/ctrlp.vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
