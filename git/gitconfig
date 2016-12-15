@@ -127,6 +127,6 @@
   path = .gitconfig.user
 [user]
 	name = Sandeep Jain
-	email = saneep@example.com
+	email = sandeep@example.com
 [credential]
 	helper = osxkeychain
