@@ -1,4 +1,3 @@
-Plug 'jistr/vim-nerdtree-tabs'
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'xolox/vim-misc'

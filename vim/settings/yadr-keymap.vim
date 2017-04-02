@@ -114,10 +114,6 @@ nmap <silent> ,qo :copen<CR>
 " which will move us around by functions
 nnoremap <silent> <D-j> }
 nnoremap <silent> <D-k> {
-autocmd FileType ruby map <buffer> <D-j> ]m
-autocmd FileType ruby map <buffer> <D-k> [m
-autocmd FileType rspec map <buffer> <D-j> }
-autocmd FileType rspec map <buffer> <D-k> {
 autocmd FileType javascript map <buffer> <D-k> }
 autocmd FileType javascript map <buffer> <D-j> {
 
@@ -138,10 +134,10 @@ nnoremap <silent> ,x :bn<CR>
 " Window/Tab/Split Manipulation
 " ==============================
 " Move between split windows by using the four directions H, L, I, N
-nnoremap <silent> <C-h> <C-w>h
-nnoremap <silent> <C-l> <C-w>l
-nnoremap <silent> <C-k> <C-w>k
-nnoremap <silent> <C-j> <C-w>j
+" nnoremap <silent> <C-h> <C-w>h
+" nnoremap <silent> <C-l> <C-w>l
+" nnoremap <silent> <C-k> <C-w>k
+" nnoremap <silent> <C-j> <C-w>j
 
 " Make gf (go to file) create the file, if not existent
 nnoremap gf :e<cfile><CR>
