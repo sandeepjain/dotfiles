@@ -1,5 +1,5 @@
-Plug 'gregsexton/gitv'
-Plug 'mattn/gist-vim'
-Plug 'tpope/vim-fugitive'
+Plug 'gregsexton/gitv', {'on': ['Gitv']}
+"Plug 'mattn/gist-vim'
 Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'

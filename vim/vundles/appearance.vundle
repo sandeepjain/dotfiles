@@ -1,4 +1,3 @@
-Plug 'mhinz/vim-startify'
 Plug 'chrisbra/color_highlight'
 Plug 'skwp/vim-colors-solarized'
 Plug 'itchyny/lightline.vim'

@@ -1,4 +1,4 @@
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
