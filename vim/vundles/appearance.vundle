@@ -5,5 +5,6 @@ Plug 'bogado/file-line'
 Plug 'jby/tmux.vim'
 Plug 'morhetz/gruvbox'
 Plug 'xsunsmile/showmarks'
-"Plug 'joshdick/onedark.vim'
 Plug 'chriskempson/base16-vim'
+
+"Plug 'joshdick/onedark.vim'
