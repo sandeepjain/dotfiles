@@ -39,3 +39,9 @@ Plug 'mxw/vim-jsx'
 " Plug 'Shougo/deoplete.vim'
 " Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 " call plug#end()
+
+Plug 'sbdchd/neoformat'
+
+" Plug 'prettier/vim-prettier', { 
+" 	\ 'do': 'yarn install', 
+" 	\ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] } 
