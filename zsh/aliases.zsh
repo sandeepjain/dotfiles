@@ -108,6 +108,13 @@ alias todo='open nvalt://find/todo'
 # Forward port 80 to 3000
 alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 80 in'
 
-alias ichrome='open -n -a "Google Chrome" --args --user-data-dir=/tmp/temp_chrome_user_data_dir_for_ic$(( ( RANDOM % 10 )  + 1 )) http://jsvrocks.com'
-
 alias nr='npm run'
+
+#tmuxinator aliases
+alias tn='tmuxinator'
+alias tns='tmuxinator s'
+alias tnl='tmuxinator l'
+alias tne='tmuxinator e'
+
+#Open random chrome
+alias ichrome='open -n -a "Google Chrome" --args --user-data-dir=/tmp/temp_chrome_user_data_dir_for_ic$(( ( RANDOM % 10 )  + 1 )) http://jsvrocks.com'

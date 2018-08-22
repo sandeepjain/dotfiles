@@ -13,5 +13,7 @@ call EasyMotion#InitOptions({
 \ , 'hl_group_shade'  : 'Comment'
 \ })
 
-nmap ,<ESC> ,,w
-nmap ,<S-ESC> ,,b
+let g:EasyMotion_smartcase = 1
+
+" nmap ,<ESC> ,,w
+" nmap ,<S-ESC> ,,b
