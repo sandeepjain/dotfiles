@@ -1,10 +1,7 @@
 Plug 'scrooloose/nerdtree'
-"Plug 'ctrlpvim/ctrlp.vim'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 Plug 'leafgarland/typescript-vim'
-" For system wide install
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
-
